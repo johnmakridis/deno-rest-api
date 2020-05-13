@@ -9,5 +9,6 @@ Deno Rest API
 > deno run --allow-read --allow-net main.ts
 
 # Demo page
-[localhost:4040/cities](http://localhost:4040/cities) (you can change the port from .env file)
+http://localhost:4040/cities 
+You can change the host/port from .env file
 ```
