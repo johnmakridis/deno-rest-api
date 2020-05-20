@@ -1,19 +1,16 @@
 // @ts-ignore
-import { Router, Context } from 'https://deno.land/x/oak/mod.ts';
+import { App, Request, Response } from 'https://raw.githubusercontent.com/NMathar/deno-express/master/mod.ts';
 
 
 export class IndexRoute {
 
-  public router: Router = new Router();
+  public routes(app: App): void {
 
-  constructor() {
-
-    this.router.get('/', (ctx: Context) => {
-
-      ctx.response.status = 200;
-      ctx.response.body = { code: 200, status: 'OK' };
-
+    app.get('/', (req: Request, res: Response) => {
+      return res.json({ msg: 'Hello ;)' });
     });
 
   }
+
 }
+
